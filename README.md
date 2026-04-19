@@ -1,5 +1,8 @@
 # ArbitrageMaster AI 🚀
 
+🚀 **Canlı Uygulama Girişi:** [Projeyi Tarayıcıda Açmak İçin Tıklayın](https://azraozclkk.github.io/ArbitrageMasterAI/)  
+*(Not: Bu linkin çalışması için GitHub deponuzda "Settings > Pages" kısmından "main" dalını seçip kaydetmeniz gerekir.)*
+
 ArbitrageMaster AI, küresel e-ticaret arbitrajının geleceğini keşfetmenizi sağlayan yüksek teknolojili ve yapay zeka destekli bir platformdur. 
 
 Bu repo, uygulamanın **tanıtım sürümünü (SaaS Landing Page)** ve **Dinamik Kontrol Paneli Maketini (Dashboard Mockup)** içermektedir. "Deep Dark" estetiği, neon detaylar ve yüksek performanslı animasyonlarla modern bir deneyim sunar.
