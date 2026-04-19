@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="tr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ArbitrageMaster AI - Global Arbitrajın Geleceğini Keşfedin. Amazon, eBay ve yerel pazaryerleri arasındaki kar marjlarını yapay zeka ile otomatik yakalayın.">
+    <title>ArbitrageMaster AI | Global Arbitrage Automation</title>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Feather Icons for lightweight SVGs -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Canvas for Data Flow Animation -->
+    <canvas id="data-canvas"></canvas>
+
+    <!-- Header -->
+    <header class="glass-header">
+        <div class="container header-container">
+            <!-- Logo -->
+            <div class="logo">
+                <span class="logo-icon"><i data-feather="cpu"></i></span>
+                <span class="logo-text">Arbitrage<span class="accent-blue">Master</span> AI</span>
+            </div>
+
+            <!-- Header Right -->
+            <div class="header-right">
+                <!-- Language Selector -->
+                <div class="lang-dropdown">
+                    <button class="lang-btn" id="lang-btn" aria-haspopup="true" aria-expanded="false">
+                        <i data-feather="globe"></i>
+                        <span id="current-lang">TR</span>
+                        <i data-feather="chevron-down" class="dropdown-icon"></i>
+                    </button>
+                    <ul class="dropdown-menu" id="lang-menu">
+                        <!-- 20 Languages -->
+                        <li data-lang="tr" data-dir="ltr">Türkçe</li>
+                        <li data-lang="en" data-dir="ltr">İngilizce (English)</li>
+                        <li data-lang="es" data-dir="ltr">İspanyolca (Español)</li>
+                        <li data-lang="de" data-dir="ltr">Almanca (Deutsch)</li>
+                        <li data-lang="zh" data-dir="ltr">Çince (Manderin)</li>
+                        <li data-lang="fr" data-dir="ltr">Fransızca (Français)</li>
+                        <li data-lang="ru" data-dir="ltr">Rusça (Русский)</li>
+                        <li data-lang="ar" data-dir="rtl">Arapça (العربية)</li>
+                        <li data-lang="ja" data-dir="ltr">Japonca (日本語)</li>
+                        <li data-lang="pt" data-dir="ltr">Portekizce (Português)</li>
+                        <li data-lang="hi" data-dir="ltr">Hintçe (हिन्दी)</li>
+                        <li data-lang="it" data-dir="ltr">İtalyanca (Italiano)</li>
+                        <li data-lang="ko" data-dir="ltr">Korece (한국어)</li>
+                        <li data-lang="nl" data-dir="ltr">Hollandaca (Nederlands)</li>
+                        <li data-lang="pl" data-dir="ltr">Lehçe (Polski)</li>
+                        <li data-lang="sv" data-dir="ltr">İsveççe (Svenska)</li>
+                        <li data-lang="vi" data-dir="ltr">Vietnamca (Tiếng Việt)</li>
+                        <li data-lang="el" data-dir="ltr">Yunanca (Ελληνικά)</li>
+                        <li data-lang="he" data-dir="rtl">İbranice (עברית)</li>
+                        <li data-lang="fa" data-dir="rtl">Farsça (فارسی)</li>
+                    </ul>
+                </div>
+                <!-- Login Button -->
+                <a href="#" class="btn btn-login" id="login-btn">
+                    <span>Login</span>
+                    <div class="neon-border"></div>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero text-center pt-nav">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="badge-wrapper">
+                        <span class="badge" id="hero-badge">AI-Powered Arbitrage v2.0 Live</span>
+                    </div>
+                    <h1 class="hero-title" id="hero-title">Global Arbitrajın <br><span class="gradient-text">Geleceğini Keşfedin</span></h1>
+                    <p class="hero-subtitle" id="hero-subtitle">Amazon, eBay ve yerel pazaryerleri arasındaki devasa kâr marjlarını yapay zeka ile otomatik yakalayın.</p>
+                    <div class="hero-actions">
+                        <a href="#waitlist" class="btn btn-primary btn-glow" id="hero-cta">Erken Erişime Katıl <i data-feather="arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic Dashboard Mockup -->
+        <section class="dashboard-preview">
+            <div class="container mockup-container">
+                <div class="dashboard-glass">
+                    <div class="dashboard-header">
+                        <div class="mac-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div class="dashboard-tabs">
+                            <span class="tab active">Canlı Tarama</span>
+                            <span class="tab">Kâr Analizi</span>
+                        </div>
+                    </div>
+                    <div class="dashboard-body">
+                        <!-- Product Card -->
+                        <div class="product-card">
+                            <div class="product-info-row">
+                                <div class="product-icon"><i data-feather="box"></i></div>
+                                <div class="product-details">
+                                    <h3>Apple AirPods Pro (2. Nesil)</h3>
+                                    <span class="sku">SKU: AAP-PRO-2G</span>
+                                </div>
+                                <div class="ai-confidence">
+                                    <span class="pulse-dot"></span>
+                                    AI Güveni: %98
+                                </div>
+                            </div>
+                            
+                            <div class="markets-compare">
+                                <!-- Market 1 -->
+                                <div class="market-box source">
+                                    <div class="market-name">Amazon US</div>
+                                    <div class="market-price" id="source-price">$249.00</div>
+                                    <div class="market-trend down"><i data-feather="trending-down"></i> -%2 indirim</div>
+                                </div>
+                                <!-- Arrow -->
+                                <div class="arbitrage-arrow">
+                                    <i data-feather="zap" class="accent-lime"></i>
+                                    <div class="arrow-line"></div>
+                                </div>
+                                <!-- Market 2 -->
+                                <div class="market-box target">
+                                    <div class="market-name">Trendyol TR</div>
+                                    <div class="market-price" id="target-price">₺9,499.00</div>
+                                    <div class="market-trend up"><i data-feather="trending-up"></i> Yüksek Talep</div>
+                                </div>
+                            </div>
+                            
+                            <div class="profit-calc">
+                                <div class="profit-label">Tahmini Net Kâr (Adet)</div>
+                                <div class="profit-value accent-lime" id="profit-margin">~$74.50</div>
+                                <button class="btn btn-sm btn-ghost">Otomatik İlan Ver</button>
+                            </div>
+                        </div>
+                        
+                        <div class="chart-container">
+                            <!-- Visual placeholder for a chart -->
+                            <div class="chart-bars">
+                                <div class="bar" style="height: 40%"><span>Amazon</span></div>
+                                <div class="bar highlight" style="height: 85%"><span>Trendyol</span></div>
+                                <div class="bar" style="height: 60%"><span>eBay</span></div>
+                                <div class="bar" style="height: 50%"><span>Hepsiburada</span></div>
+                            </div>
+                            <div class="chart-label">Platformlara Göre Fiyat Dağılımı</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Glowing orb behind the dashboard -->
+                <div class="glow-orb primary-orb"></div>
+                <div class="glow-orb secondary-orb"></div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features" id="features">
+            <div class="container">
+                <div class="features-grid">
+                    <!-- Feature 1 -->
+                    <div class="feature-card">
+                        <div class="feature-icon-wrapper blue-glow">
+                            <i data-feather="search"></i>
+                        </div>
+                        <h3 id="feat1-title">Anlık Veri Taraması</h3>
+                        <p id="feat1-desc">Milyonlarca ürünü nanosaniyeler içinde tarayın. Pazar yerleri arasındaki anlık fiyat değişimlerini ve stok durumlarını rakiplerden önce keşfedin.</p>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div class="feature-card">
+                        <div class="feature-icon-wrapper lime-glow">
+                            <i data-feather="activity"></i>
+                        </div>
+                        <h3 id="feat2-title">AI Kâr Analizi</h3>
+                        <p id="feat2-desc">Gelişmiş algoritmalarımız; kargo, vergi ve komisyon bedellerini hesaplayarak net kâr marjınızı sıfır hata payı ile size sunar.</p>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div class="feature-card">
+                        <div class="feature-icon-wrapper purple-glow">
+                            <i data-feather="layers"></i>
+                        </div>
+                        <h3 id="feat3-title">Otomatik İlan Oluşturucu</h3>
+                        <p id="feat3-desc">Tespit edilen kârlı ürünleri tek tıkla hedef pazar yerinde listeleyin. Stok ve fiyat senkronizasyonunu arkanıza yaslanarak izleyin.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Waitlist -->
+        <section class="cta-section" id="waitlist">
+            <div class="container">
+                <div class="cta-box glass-panel">
+                    <h2 class="cta-title" id="cta-title">Sınırlı Erken Erişim İçin Bekleme Listesine Katılın</h2>
+                    <p class="cta-subtitle" id="cta-subtitle">ArbitrageMaster AI kapalı beta sürecine giriyor. İlk deneyenlerden olmak için hemen yerinizi ayırtın.</p>
+                    <form class="waitlist-form" id="waitlistForm">
+                        <div class="input-group">
+                            <i data-feather="mail" class="input-icon"></i>
+                            <input type="email" placeholder="E-posta adresiniz" required id="emailInput">
+                            <button type="submit" class="btn btn-primary" id="waitlist-btn">Bana Haber Ver</button>
+                        </div>
+                        <p class="form-status" id="form-status"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <span class="logo-text">Arbitrage<span class="accent-blue">Master</span></span>
+            </div>
+            <div class="copyright">
+                &copy; <span id="year"></span> ArbitrageMaster AI. All rights reserved.
+            </div>
+            <div class="social-links">
+                <a href="#"><i data-feather="twitter"></i></a>
+                <a href="#"><i data-feather="linkedin"></i></a>
+                <a href="#"><i data-feather="github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Initialize Icons -->
+    <script>
+        feather.replace();
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
